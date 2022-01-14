@@ -1,5 +1,6 @@
 @import "header";
-@import "main";
+@import "mainhead";
+@import "mainservices";
 
 * {
   margin: 0;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: 'Nunito', sans-serif;
 }
 
 .container {

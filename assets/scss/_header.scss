@@ -1,59 +1,55 @@
 .header {
-  height: 90px;
   display: flex;
-  flex-direction: row;
-  position: relative;
-  z-index: 1;
-  color: #ffffff;
-  font-family: Nunito Sans, serif;
+  height: 90px;
+  position: absolute;
   align-items: center;
-  justify-content: space-between;
+  z-index: 10;
 
   &_logo {
     width: 136px;
-    height: 35px;
-    position: absolute;
-    font-style: normal;
     font-weight: bold;
     font-size: 28px;
     line-height: 38px;
-
-    img {
-      width: 150px;
-      height: 30px;
-    }
+    color: #ffffff;
   }
 
   &_nav {
-    width: 825px;
-    height: 24px;
     display: flex;
-    justify-content: flex-end;
+    width: 750px;
+    justify-content: end;
 
-    li a {
-      width: 84px;
-      height: 35px;
-      font-style: normal;
-      font-weight: 600;
+    .header_content_links {
+      padding: 0 30px;
+      color: #ffffff;
+      text-transform: capitalize;
       font-size: 18px;
-      line-height: 25px;
-      justify-content: space-between;
-      display: flex;
+      font-weight: 600;
+
     }
   }
 
   .header_buttons {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+
+    li:nth-child(1) {
+      width: 43px;
+      height: 43px;
+      border: 1px solid #ffffff;
+      border-radius: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-right: 37px
+    }
 
     .header_language {
       width: 29px;
       height: 22px;
-      left: 1477px;
-      font-style: normal;
       font-weight: 600;
       font-size: 16px;
       line-height: 22px;
+      color: #ffffff;
     }
 
     .header_book {
@@ -61,12 +57,11 @@
       height: 43px;
       background: #ffb300;
       border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       a {
-        width: 83px;
-        height: 25px;
-        left: 26px;
-        font-style: normal;
         font-weight: 600;
         font-size: 18px;
         line-height: 25px;

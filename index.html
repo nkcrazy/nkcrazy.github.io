@@ -1,80 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FlyKhiva</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Fly Khiva</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header class="header">
         <div class="header_logo">Fly Khiva</div>
         <ul class="header_nav">
-          <li>
-            <a class="header_content_links">home</a>
-          </li>
-          <li>
-            <a class="header_content_links">about</a>
-          </li>
-          <li>
-            <a class="header_content_links">services</a>
-          </li>
-          <li>
-            <a class="header_content_links">news</a>
-          </li>
-          <li>
-            <a class="header_content_links">gallery</a>
-          </li>
-          <li>
-            <a class="header_content_links">contacts</a>
-          </li>
+            <li>
+                <a class="header_content_links" href="#">home</a>
+            </li>
+            <li>
+                <a class="header_content_links" href="#">about</a>
+            </li>
+            <li>
+                <a class="header_content_links" href="#">services</a>
+            </li>
+            <li>
+                <a class="header_content_links" href="#">news</a>
+            </li>
+            <li>
+                <a class="header_content_links" href="#">gallery</a>
+            </li>
+            <li>
+                <a class="header_content_links" href="#">contacts</a>
+            </li>
         </ul>
         <ul class="header_buttons">
-          <li>
-            <a class="header_language"> eng </a>
-          </li>
-          <li class="header_book">
-            <a> book now </a>
-          </li>
+            <li>
+                <a class="header_language" href="#"> Eng </a>
+            </li>
+            <li class="header_book">
+                <a href="#"> Book now </a>
+            </li>
         </ul>
-      </header>
-    </div>
+    </header>
+</div>
 
-    <main class="main">
-      <section class="main_head">
+<main class="main">
+    <section class="main_head">
+        <img src="assets/img/orangeback.png" alt="main_background"/>
         <div class="container">
-          <div class="main_head_text">
-            our planes, your destinations
-            <img src="assets/img/plane.png" alt="main_plane" />
-          </div>
-          <div class="reservation">
-            <div class="reservation_table"></div>
-            <div class="reservation_button"></div>
-          </div>
-          <div class="welcome_text">
-            <div class="welcome_text-title">welcome to our website</div>
-            <div class="welcome_text-content">
-              On the other hand, we denounce with righteous indignation and
-              dislike men who are so beguiled and demoralized by the charms of
-              pleasure of the moment, so blinded by desire, that they cannot
-              foresee the pain and trouble that are bound to ensue; and equal
-              blame belongs to those who fail in their duty through weakness of
-              will, which is the same as saying through shrinking from toil and
-              pain. These cases are perfectly simple and easy to distinguish
-            </div>
-          </div>
-        </div>
-        <img src="assets/img/orangeback.png" alt="main_background" />
-      </section>
-      <section class="services"></section>
-      <section class="special-offers"></section>
-      <section class="main_news"></section>
-      <section class="main_gallery"></section>
-      <section class="main_contact"></section>
-    </main>
+            <div class="reservation_wrapper">
+                <div class="main_head_text">
+                    <img src="assets/img/plane.png" alt="main_plane"/>
+                    <div class="main_head_title">our planes,<br>your destinations</div>
+                </div>
+                <div class="reservation">
+                    <form class="reservation_form" action="#" method="post">
+                        <div class="form-wrap">
+                            <label class="form-label-outside">From</label>
+                            <select class="form-input select-filter select2-hidden-accessible"
+                                    data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
+                                <option value="1">Select</option>
+                                <option value="2">Tashkent (TAS)</option>
+                                <option value="3">Tokyo (HND)</option>
+                                <option value="4">Chicago (ORD)</option>
+                            </select>
+                        </div>
 
-    <footer></footer>
-  </body>
+                        <div class="form-wrap">
+                            <label class="form-label-outside">To</label>
+                            <select class="form-input select-filter select2-hidden-accessible"
+                                    data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
+                                <option value="1">Select</option>
+                                <option value="2">Beijing (PEK)</option>
+                                <option value="3">Dubai (DXB)</option>
+                                <option value="4">Los Angeles (LAX)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label class="form-label-outside">Departure</label>
+                            <input type="date" id="book-datepicker">
+                        </div>
+
+                        <div class="form-wrap">
+                            <label class="form-label-outside">Return</label>
+                            <input type="date" id="book-datepicker2">
+                        </div>
+
+                        <div class="form-wrap">
+                            <label class="form-label-outside">Adults</label>
+                            <div class="stepper">
+                                <input type="number" min="0" value="1">
+                                <span class="stepper-arrow up"></span>
+                                <span class="stepper-arrow down"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <select class="form-input select-filter select2-hidden-accessible"
+                                    data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
+                                <option value="1">Payment Method</option>
+                                <option value="2">Uzcard</option>
+                                <option value="3">Visa</option>
+                                <option value="4">Mastercard</option>
+                            </select>
+                        </div>
+
+                    </form>
+                    <a class="reservation_button" href="#"/>
+                        <span>Search</span>
+                    </a>
+                </div>
+                <div class="welcome_text">
+                    <div class="welcome_text-title">Welcome to our website</div>
+                    <div class="welcome_text-content">
+                        On the other hand, we denounce with righteous indignation and
+                        dislike men who are so beguiled and demoralized by the charms of
+                        pleasure of the moment, so blinded by desire, that they cannot
+                        foresee the pain and trouble that are bound to ensue; and equal
+                        blame belongs to those who fail in their duty through weakness of
+                        will, which is the same as saying through shrinking from toil and
+                        pain. These cases are perfectly simple and easy to distinguish
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="main_services">
+        <div class="container">
+            <div class="main_services_wrapper">
+                <div class="main_services_title">Services</div>
+                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
+                    demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee
+                    the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their
+                    duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+                    These cases are perfectly simple and easy to distinguish</p>
+                <div class="main_services_wrap">
+                    <div class="main_services_single">
+                        <i class="">food</i>
+                        <div class="main_services_single-title">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                            of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </div>
+                    </div>
+                    <div class="main_services_single">
+                        <i class="">food</i>
+                        <div class="main_services_single-title">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                            of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </div>
+                    </div>
+                    <div class="main_services_single">
+                        <i class="">food</i>
+                        <div class="main_services_single-title">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                            of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </div>
+                    </div>
+                    <div class="main_services_single">
+                        <i class="">food</i>
+                        <div class="main_services_single-title">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                            of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </div>
+                    </div>
+                </div>
+                <div class="main_services_img">
+                    <img src="assets/img/ovalservice.png" alt="servicees_img"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="special-offers">
+        <div class="container">
+            <div class="special-offers_wrapper">
+                <div class="special-offers_title">Buy at competitive prices
+                    <span>Special offers on popular destinations</span>
+                </div>
+                <div class="special-offers_slider">
+                    <div class="special-offers_slider-single">
+                        <img src="assets/img/smurg.png" alt=""/>
+                        <div class="slider-single_info">
+                            Samarkand - Urgench
+                            <span>from 15$</span>
+                        </div>
+                    </div>
+                    <div class="special-offers_slider-single">
+                        <img src="assets/img/smurg.png" alt=""/>
+                        <div class="slider-single_info">
+                            Samarkand - Urgench
+                            <span>from 15$</span>
+                        </div>
+                    </div>
+                    <div class="special-offers_slider-single">
+                        <img src="assets/img/smurg.png" alt=""/>
+                        <div class="slider-single_info">
+                            Samarkand - Urgench
+                            <span>from 15$</span>
+                        </div>
+                    </div>
+                    <div class="special-offers_slider-single">
+                        <img src="assets/img/smurg.png" alt=""/>
+                        <div class="slider-single_info">
+                            Samarkand - Urgench
+                            <span>from 15$</span>
+                        </div>
+                    </div>
+                    <div class="special-offers_slider-single">
+                        <img src="assets/img/smurg.png" alt=""/>
+                        <div class="slider-single_info">
+                            Samarkand - Urgench
+                            <span>from 15$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main_news">
+        <div class="container">
+            <div class="main_news-title">
+                Buy at competitive prices
+                <span>Special offers on popular destinations</span>
+            </div>
+            <div class="main_news_wrapper">
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+                <div class="main_news_single">
+                    <img src="assets/img/planenews.png" alt=""/>
+                    <div class="main_news_single-title">lorem ipsum</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main_gallery">
+        <div class="container">
+            <div class="main_gallery-title">
+                Gallery
+            </div>
+            <div class="main_gallery_wrapper">
+                <img src="assets/img/gallery1.png" alt=""/>
+                <img src="assets/img/gallery2.png" alt=""/>
+                <img src="assets/img/gallery3.png" alt=""/>
+                <img src="assets/img/gallery4.png" alt=""/>
+            </div>
+        </div>
+    </section>
+    <section class="main_contact">
+        <div class="container">
+            <div class="main_contact_wrapper">
+                <img src="assets/img/naqsh_3.png" alt=""/>
+                <img src="assets/img/plane.png" alt=""/>
+                <div class="main_contact-form">
+                    <img src="assets/img/loginbg.png" alt=""/>
+                    contact
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer_logo">
+            Fly Khiva
+        </div>
+        <div class="footer_nav">
+            <ul>
+                <li>
+                    <a class="footer_link">home</a>
+                </li>
+                <li>
+                    <a class="footer_link">home</a>
+                </li>
+                <li>
+                    <a class="footer_link">home</a>
+                </li>
+                <li>
+                    <a class="footer_link">home</a>
+                </li>
+                <li>
+                    <a class="footer_link">home</a>
+                </li>
+                <li>
+                    <a class="footer_link">home</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_adsress">
+            Урда ж/м, Шайхантахурский район, Ташкент
+        </div>
+    </div>
+</footer>
+</body>
 </html>
