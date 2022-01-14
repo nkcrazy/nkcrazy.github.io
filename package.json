@@ -1,0 +1,35 @@
+{
+  "name": "flykhiva",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^2.27.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-debug": "^3.2.0",
+    "gulp-dependents": "^1.2.5",
+    "gulp-watch": "^4.0.1",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass ./assets/scss/style.scss ./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkcrazy/nkcrazy.github.io.git"
+  },
+  "author": "Daydreamer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkcrazy/nkcrazy.github.io/issues"
+  },
+  "homepage": "https://github.com/nkcrazy/nkcrazy.github.io#readme",
+  "description": ""
+}
