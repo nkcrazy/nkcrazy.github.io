@@ -1,0 +1,63 @@
+.special-offers {
+
+  .special-offers_wrapper {
+
+    .special-offers_title {
+      width: 750px;
+      height: 62px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 50px;
+      color: #1F1F1F;
+
+      span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 33px;
+        color: #828282;
+
+      }
+    }
+
+    .special-offers_slider {
+      display: flex;
+      padding: 150px 50px;
+
+      .slick-prev::before, .slick-next::before {
+        color: #f35632;
+        margin-left: -50px;
+      }
+
+      .special-offers_slider-single {
+
+        img {
+          border-radius: 10px;
+          height: 250px;
+          width: 200px;
+          object-fit: cover;
+
+        }
+
+        .slider-single_info {
+          display: flex;
+          flex-direction: column;
+
+          .slider-single_info-city{
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          span{
+            font-weight: bold;
+            font-size: 24px;
+            color: #f35632;
+          }
+
+        }
+
+      }
+    }
+  }
+}
