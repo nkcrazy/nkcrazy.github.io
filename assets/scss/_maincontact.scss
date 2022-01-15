@@ -1,0 +1,47 @@
+
+.main_contact {
+
+  .main_contact_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .main_contact-images {
+      position: absolute;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+      img:nth-child(2) {
+        position: absolute;
+        width: 600px;
+        z-index: 10;
+      }
+
+      img:nth-child(1) {
+        width: 600px;
+      }
+    }
+
+    .main_contact-form {
+      position: relative;
+      display: flex;
+      width: 50%;
+      align-items: center;
+      margin-left: auto;
+      justify-content: center;
+
+      img {
+        width: 500px;
+      }
+
+      .main_contact-form_content {
+        position: absolute;
+        justify-content: center;
+        display: flex;
+      }
+    }
+  }
+
+
+}
