@@ -82,14 +82,16 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 84px 0; }
     .main_head .reservation_wrapper .reservation_form {
       display: flex;
       align-items: center;
       height: 72px;
       background: #FFFFFF;
-      border-radius: 10px; }
+      border-radius: 10px;
+      width: 970px;
+      justify-content: center; }
     .main_head .reservation_wrapper .reservation_button {
       height: 72px;
       background: #FFB300;
@@ -105,11 +107,25 @@
         line-height: 25px;
         color: #F3F3F3; }
     .main_head .reservation_wrapper .reservation .form-wrap {
+      display: flex;
+      width: 170px;
+      padding: 10px;
+      font-size: 18px;
+      align-items: center;
+      color: #111111;
       /* Firefox */ }
       .main_head .reservation_wrapper .reservation .form-wrap .form-input,
-      .main_head .reservation_wrapper .reservation .form-wrap input {
+      .main_head .reservation_wrapper .reservation .form-wrap input,
+      .main_head .reservation_wrapper .reservation .form-wrap input::placeholder {
         border: 0;
-        background-color: #fff; }
+        background-color: transparent;
+        font-size: 18px;
+        opacity: 1; }
+      .main_head .reservation_wrapper .reservation .form-wrap input, .main_head .reservation_wrapper .reservation .form-wrap select {
+        padding-left: 5px; }
+      .main_head .reservation_wrapper .reservation .form-wrap input:focus-visible {
+        outline: none;
+        border: 0; }
       .main_head .reservation_wrapper .reservation .form-wrap select {
         /* for Firefox */
         -moz-appearance: none;
@@ -493,3 +509,29 @@
   width: 1140px;
   margin: 0 auto;
   padding: 0 15px; }
+
+.scrollToTopBtn {
+  background-color: #f35632;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease; }
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0); }
