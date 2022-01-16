@@ -45,6 +45,7 @@
         height: 72px;
         background: #FFFFFF;
         border-radius: 10px;
+
       }
 
       &_button {
@@ -62,6 +63,33 @@
           font-size: 18px;
           line-height: 25px;
           color: #F3F3F3;
+        }
+      }
+
+      .form-wrap {
+
+        .form-input,
+        input {
+          border: 0;
+          background-color: #fff;
+        }
+
+        select {
+          /* for Firefox */
+          -moz-appearance: none;
+          /* for Safari, Chrome, Opera */
+          -webkit-appearance: none;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
         }
       }
     }

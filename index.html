@@ -60,10 +60,10 @@
                 <div class="reservation">
                     <form class="reservation_form" action="#" method="post">
                         <div class="form-wrap">
-                            <label class="form-label-outside">From</label>
-                            <select class="form-input select-filter select2-hidden-accessible"
+                            <i class="fas fa-map-marker-alt"></i>
+                            <select class="form-input"
                                     data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
-                                <option value="1">Select</option>
+                                <option value="1">From</option>
                                 <option value="2">Tashkent (TAS)</option>
                                 <option value="3">Tokyo (HND)</option>
                                 <option value="4">Chicago (ORD)</option>
@@ -71,10 +71,10 @@
                         </div>
 
                         <div class="form-wrap">
-                            <label class="form-label-outside">To</label>
-                            <select class="form-input select-filter select2-hidden-accessible"
+                            <i class="fas fa-exchange-alt"></i>
+                            <select class="form-input"
                                     data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
-                                <option value="1">Select</option>
+                                <option value="1">To</option>
                                 <option value="2">Beijing (PEK)</option>
                                 <option value="3">Dubai (DXB)</option>
                                 <option value="4">Los Angeles (LAX)</option>
@@ -82,17 +82,19 @@
                         </div>
 
                         <div class="form-wrap">
-                            <label class="form-label-outside">Departure</label>
-                            <input type="date" id="book-datepicker">
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="text" id="book-datepicker" placeholder="Departure" onfocus="(this.type='date')"
+                                   onblur="(this.type='text')">
                         </div>
 
                         <div class="form-wrap">
-                            <label class="form-label-outside">Return</label>
-                            <input type="date" id="book-datepicker2">
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="text" id="book-datepicker" placeholder="Return" onfocus="(this.type='date')"
+                                   onblur="(this.type='text')">
                         </div>
 
-                        <div class="form-wrap">
-                            <label class="form-label-outside">Adults</label>
+                        <div class="form-wrap" style="display: flex">
+                            <span><i class="far fa-user"></i></span>
                             <div class="stepper">
                                 <input type="number" min="0" value="1">
                                 <span class="stepper-arrow up"></span>
@@ -101,6 +103,7 @@
                         </div>
 
                         <div class="form-wrap">
+                            <span><i class="far fa-credit-card"></i></span>
                             <select class="form-input select-filter select2-hidden-accessible"
                                     data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
                                 <option value="1">Payment Method</option>
@@ -317,15 +320,35 @@
     </section>
     <section class="main_contact">
         <div class="container">
-            <div id="contact" class="main_contact_wrapper">
+            <div id="contact" class="main_contact-title">
+                Contact us
+            </div>
+            <div class="main_contact_wrapper">
                 <div class="main_contact-images">
                     <img src="assets/img/naqsh_3.png" alt=""/>
                     <img src="assets/img/plane.png" alt=""/>
                 </div>
                 <div class="main_contact-form">
                     <img src="assets/img/loginbg.png" alt=""/>
-                    <div class="main_contact-form_content">
-                        text
+                    <div class="form_content">
+                        <h1>Log in</h1>
+                        <label for="username">Email Address</label>
+                        <input type="text" placeholder="example@gmail.com" id="username">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password"/>
+                        <span class="far fa-eye" toggle="password" onclick="myFunction()"></span>
+                        <button>Log In</button>
+                        <a href="#" class="reset-pass">reset password?</a>
+                        <span>Or</span>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-github"></i></a>
+                        </div>
+                        <a href="#" class="new-account">
+                            <span>Don’t have account yet?</span>
+                            <span>New Account</span>
+                        </a>
                     </div>
                 </div>
             </div>

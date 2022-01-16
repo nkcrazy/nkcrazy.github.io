@@ -104,6 +104,23 @@
         font-size: 18px;
         line-height: 25px;
         color: #F3F3F3; }
+    .main_head .reservation_wrapper .reservation .form-wrap {
+      /* Firefox */ }
+      .main_head .reservation_wrapper .reservation .form-wrap .form-input,
+      .main_head .reservation_wrapper .reservation .form-wrap input {
+        border: 0;
+        background-color: #fff; }
+      .main_head .reservation_wrapper .reservation .form-wrap select {
+        /* for Firefox */
+        -moz-appearance: none;
+        /* for Safari, Chrome, Opera */
+        -webkit-appearance: none; }
+      .main_head .reservation_wrapper .reservation .form-wrap input::-webkit-outer-spin-button,
+      .main_head .reservation_wrapper .reservation .form-wrap input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+      .main_head .reservation_wrapper .reservation .form-wrap input[type=number] {
+        -moz-appearance: textfield; }
   .main_head .reservation_wrapper .welcome_text {
     width: 100%;
     background-color: #fff;
@@ -136,8 +153,6 @@
       padding: 30px 50px; }
     .main_services .main_services_wrapper .main_services_title {
       width: 287px;
-      height: 62px;
-      font-style: normal;
       font-weight: bold;
       font-size: 60px;
       line-height: 82px;
@@ -181,8 +196,6 @@
 
 .special-offers .special-offers_wrapper .special-offers_title {
   width: 750px;
-  height: 62px;
-  font-style: normal;
   font-weight: bold;
   font-size: 60px;
   line-height: 50px;
@@ -218,8 +231,6 @@
 
 .main_news .main_news-title {
   width: 750px;
-  height: 62px;
-  font-style: normal;
   font-weight: bold;
   font-size: 60px;
   line-height: 50px;
@@ -256,8 +267,6 @@
 
 .main_gallery-title {
   width: 287px;
-  height: 62px;
-  font-style: normal;
   font-weight: bold;
   font-size: 60px;
   line-height: 82px;
@@ -353,34 +362,124 @@
     .footer_address svg {
       margin: 0 10px; }
 
-.main_contact .main_contact_wrapper {
+.main_contact-title {
+  width: 300px;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 82px;
+  color: #1F1F1F; }
+
+.main_contact_wrapper {
   position: relative;
   display: flex;
-  align-items: center; }
-  .main_contact .main_contact_wrapper .main_contact-images {
+  align-items: center;
+  padding: 100px 0; }
+  .main_contact_wrapper .main_contact-images {
     position: absolute;
     justify-content: center;
     display: flex;
     align-items: center; }
-    .main_contact .main_contact_wrapper .main_contact-images img:nth-child(2) {
+    .main_contact_wrapper .main_contact-images img:nth-child(2) {
       position: absolute;
       width: 600px;
       z-index: 10; }
-    .main_contact .main_contact_wrapper .main_contact-images img:nth-child(1) {
+    .main_contact_wrapper .main_contact-images img:nth-child(1) {
       width: 600px; }
-  .main_contact .main_contact_wrapper .main_contact-form {
-    position: relative;
-    display: flex;
-    width: 50%;
-    align-items: center;
+  .main_contact_wrapper .main_contact-form {
     margin-left: auto;
+    display: flex;
+    align-items: center;
     justify-content: center; }
-    .main_contact .main_contact_wrapper .main_contact-form img {
-      width: 500px; }
-    .main_contact .main_contact_wrapper .main_contact-form .main_contact-form_content {
+    .main_contact_wrapper .main_contact-form img {
+      width: 500px;
+      border-radius: 10px; }
+    .main_contact_wrapper .main_contact-form .form_content {
       position: absolute;
       justify-content: center;
-      display: flex; }
+      display: flex;
+      flex-direction: column;
+      color: #FFFFFF;
+      height: 500px;
+      width: 322px; }
+      .main_contact_wrapper .main_contact-form .form_content .fa-eye {
+        color: grey;
+        position: relative;
+        top: -35px;
+        left: 90%; }
+      .main_contact_wrapper .main_contact-form .form_content h1 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center; }
+      .main_contact_wrapper .main_contact-form .form_content input[type=text],
+      .main_contact_wrapper .main_contact-form .form_content input[type=password] {
+        height: 46px;
+        border-radius: 5px;
+        border: 0;
+        padding: 10px;
+        margin: 10px 0; }
+        .main_contact_wrapper .main_contact-form .form_content input[type=text]::placeholder,
+        .main_contact_wrapper .main_contact-form .form_content input[type=password]::placeholder {
+          padding: 10px 10px 0; }
+      .main_contact_wrapper .main_contact-form .form_content label {
+        padding-top: 20px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px; }
+      .main_contact_wrapper .main_contact-form .form_content button {
+        background: #FFB300;
+        border-radius: 5px;
+        border: 0;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 42px;
+        margin-top: 12px; }
+      .main_contact_wrapper .main_contact-form .form_content .reset-pass {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 14px;
+        line-height: 18px;
+        padding-top: 27px;
+        color: #7D352F; }
+      .main_contact_wrapper .main_contact-form .form_content span {
+        font-size: 14px;
+        line-height: 70px;
+        color: #FFFFFF; }
+        .main_contact_wrapper .main_contact-form .form_content span:after, .main_contact_wrapper .main_contact-form .form_content span:before {
+          content: "";
+          display: inline-block;
+          width: 147px;
+          height: 0;
+          opacity: 0.1;
+          border: 1px solid #FFFFFF;
+          vertical-align: middle; }
+      .main_contact_wrapper .main_contact-form .form_content .social-container {
+        text-align: center;
+        padding-bottom: 28px; }
+        .main_contact_wrapper .main_contact-form .form_content .social-container .social {
+          border: 1px solid #ffffff;
+          border-radius: 50%;
+          width: 46px;
+          height: 46px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 18px;
+          color: #ffffff; }
+      .main_contact_wrapper .main_contact-form .form_content .new-account {
+        display: flex;
+        justify-content: space-evenly; }
+        .main_contact_wrapper .main_contact-form .form_content .new-account span {
+          line-height: 20px; }
+          .main_contact_wrapper .main_contact-form .form_content .new-account span:before, .main_contact_wrapper .main_contact-form .form_content .new-account span:after {
+            display: none; }
+          .main_contact_wrapper .main_contact-form .form_content .new-account span:nth-child(1) {
+            color: #FFFFFF;
+            font-size: 12px;
+            opacity: 0.7; }
+          .main_contact_wrapper .main_contact-form .form_content .new-account span:nth-child(2) {
+            font-size: 14px;
+            color: #7D352F; }
 
 * {
   margin: 0;

@@ -8,4 +8,21 @@ $(document).ready(function () {
         infinite: true,
     });
 
+    $('div.small').click(function() {
+        var bigHtml = $('div.large').html();
+        var smallHtml = $(this).html();
+
+        $('div.large').html(smallHtml);
+        $('div.small').html(bigHtml);
+    });
+
 });
+
+function myFunction() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
